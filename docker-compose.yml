@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+
+  apache:
+    build: ./docker
+    container_name: APACHE_
+    volumes:
+      - ./:/var/www/html
+  
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: sql2022
+      POSTGRES_USER: postgres
+    volumes:
+      - ./docker/db:/docker-entrypoint-initdb.d
+  server:
+        build:
+            context: ./server
+        ports:
+            - 7000:7000
+  client:
+        build:
+            context: ./client
+        ports:
+            - 3000:3000
+
+#http://localhost:80/public/register.php
+#http://localhost:80/public/login.php
