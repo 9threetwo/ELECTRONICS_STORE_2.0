@@ -1,8 +1,9 @@
-import { Container, Button } from 'react-bootstrap'
+import { Container, Button} from 'react-bootstrap'
 import { useContext } from 'react'
 import { AppContext } from '../components/AppContext.js'
 import { Link, useNavigate } from 'react-router-dom'
 import { logout } from '../http/userAPI.js'
+import {Row, Col} from 'react-bootstrap'
 
 const Admin = () => {
     const { user } = useContext(AppContext)
@@ -16,17 +17,30 @@ const Admin = () => {
 
     return (
         <Container>
-            <h1>Панель управления</h1>
-            <p>
-                Это панель управления магазином для администратора
-            </p>
-            <ul>
-                <li><Link to="/admin/orders">Заказы в магазине</Link></li>
-                <li><Link to="/admin/categories">Категории каталога</Link></li>
-                <li><Link to="/admin/brands">Бренды каталога</Link></li>
-                <li><Link to="/admin/products">Товары каталога</Link></li>
-            </ul>
-            <Button onClick={handleLogout}>Выйти</Button>
+            <div className='text-center p-3'><h2>Панель управления для администратора</h2>
+            </div>
+                <Row>
+                    <Col className="ml-auto">
+                        <div className='text-center text-white p-3' >
+                            <div className='p-2'><Link to="/admin/orders">
+                                <Button className='btn btn-outline-danger btn-default btn-lg' variant="outline-primary">Все заказы</Button>
+                                </Link>
+                            </div>
+                            <div className='p-2'><Link to="/admin/categories">
+                                <Button className='btn btn-outline-danger btn-default btn-lg' variant="outline-primary">Категории</Button>
+                                </Link>
+                            </div>
+                            <div className='p-2'><Link to="/admin/brands">
+                                <Button className='btn btn-outline-danger btn-default btn-lg' variant="outline-primary">Бренды</Button>
+                                </Link>
+                            </div>
+                            <div className='p-2'><Link to="/admin/products">
+                                <Button className='btn btn-outline-danger btn-default btn-lg' variant="outline-primary">Товары</Button>
+                                </Link>
+                            </div>
+                        </div>
+                    </Col>
+                </Row>
         </Container>
     )
 }

@@ -4,7 +4,8 @@ import Container from 'react-bootstrap/Container'
 const Contacts = () => {
     return (
         <Container>
-            <h1>Контактные данные</h1>
+            <div className='text-center p-3'><h1>Контактные данные</h1>
+            </div>
             <div className="container">
                 <div className="col-1-2">
                     <br></br>

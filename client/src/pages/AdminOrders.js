@@ -25,8 +25,9 @@ const AdminOrders = () => {
 
     return (
         <Container>
-            <h1>Все заказы</h1>
-            <Button onClick={() => setShow(true)}>Создать заказ</Button>
+            <div className='text-center p-3'><h1>Все заказы</h1>
+            {/* <Button className='btn btn-default btn-lg' onClick={() => setShow(true)}>Создать заказ</Button> */}
+            </div>
             <CreateOrder show={show} setShow={setShow} />
             <Orders items={orders} admin={true} />
         </Container>

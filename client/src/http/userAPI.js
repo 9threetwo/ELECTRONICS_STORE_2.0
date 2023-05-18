@@ -3,7 +3,7 @@ import jwtDecode from 'jwt-decode'
 
 export const signup = async (email, password) => {
     try {
-        const response = await guestInstance.post('user/signup', {email, password, role: 'USER'})
+        const response = await guestInstance.post('user/signup', {email, password})
         const token = response.data.token
         const user = jwtDecode(token)
         localStorage.setItem('token', token)

@@ -23,7 +23,8 @@ const UserOrders = () => {
 
     return (
         <Container>
-            <h1>Ваши заказы</h1>
+             <div className='text-center p-3'><h1>Ваши заказы</h1>
+            </div>
             <Orders items={orders} admin={false} />
         </Container>
     )

@@ -86,8 +86,9 @@ const AdminProducts = () => {
 
     return (
         <Container>
-            <h1>Товары</h1>
-            <Button onClick={() => setCreateShow(true)}>Создать товар</Button>
+            <div className='text-center p-3'><h1>Товары</h1>
+            <Button className='btn btn-default btn-lg' onClick={() => setCreateShow(true)}>Создать товар</Button>
+            </div>
             <CreateProduct show={createShow} setShow={setCreateShow} setChange={setChange} />
             <UpdateProduct id={product} show={updateShow} setShow={setUpdateShow} setChange={setChange} />
             {products.length > 0 ? (

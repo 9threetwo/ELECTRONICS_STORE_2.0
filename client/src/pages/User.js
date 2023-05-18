@@ -16,14 +16,12 @@ const User = () => {
 
     return (
         <Container>
-            <h1>Личный кабинет</h1>
-            <p>
-                Это личный кабинет постоянного покупателя магазина
-            </p>
-            <ul>
-                <li><Link to="/user/orders">История заказов</Link></li>
-            </ul>
-            <Button onClick={handleLogout}>Выйти</Button>
+            <div className='text-center p-3'><h2>Личный кабинет постоянного покупателя</h2>
+            <div className='p-2'><Link to="/user/orders">
+                <Button className='btn btn-outline-success btn-default btn-lg' variant="outline-primary">История заказов</Button>
+                </Link></div>
+            </div>
+            {/* <Button onClick={handleLogout}>Выйти</Button> */}
         </Container>
     )
 }

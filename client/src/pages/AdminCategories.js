@@ -51,8 +51,9 @@ const AdminCategories = () => {
 
     return (
         <Container>
-            <h1>Категории</h1>
-            <Button onClick={() => handleCreateClick()}>Создать категорию</Button>
+            <div className='text-center p-3'><h1>Категории</h1>
+            <Button className='btn btn-default btn-lg' onClick={() => handleCreateClick()}>Создать категорию</Button>
+            </div>
             <EditCategory id={categoryId} show={show} setShow={setShow} setChange={setChange} />
             {categories.length > 0 ? (
                 <Table bordered hover size="sm" className="mt-3">

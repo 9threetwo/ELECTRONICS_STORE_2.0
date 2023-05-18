@@ -83,7 +83,8 @@ const BasketList = observer(() => {
                     <Button onClick={() => navigate('/checkout')}>Оформить заказ</Button>
                 </>
             ) : (
-                <p>Ваша корзина пуста</p>
+                <div className='text-center p-3'><p>Ваша корзина пуста</p>
+            </div>
             )}
         </>
     )
