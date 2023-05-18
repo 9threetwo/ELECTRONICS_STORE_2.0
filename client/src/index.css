@@ -1,0 +1,12 @@
+main {
+    min-height: 84vh;
+}
+footer {
+    background-color: #231f20;
+    color: white;
+    display: block;
+    height: 77px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}

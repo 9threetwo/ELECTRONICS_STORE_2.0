@@ -1,14 +1,13 @@
 import { BrowserRouter } from 'react-router-dom'
 import AppRouter from './components/AppRouter.js'
 import NavBar from './components/NavBar.js'
+import Footer from './components/Footer.js'
 import 'bootstrap/dist/css/bootstrap.min.css'
-
 import { AppContext } from './components/AppContext.js'
 import { check as checkAuth } from './http/userAPI.js'
 import { useState, useContext, useEffect } from 'react'
 import { observer } from 'mobx-react-lite'
 import Loader from './components/Loader.js'
-
 import { fetchBasket } from './http/basketAPI.js'
 
 import axios from 'axios'
@@ -40,7 +39,10 @@ const App = observer(() => {
     return (
         <BrowserRouter>
             <NavBar />
+            <main>
             <AppRouter />
+            </main>
+            <Footer />
         </BrowserRouter>
     )
 })
